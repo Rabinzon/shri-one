@@ -1,0 +1,52 @@
+block('tv-channel').content()(function() {
+    var channel = this.ctx.channel;
+    return [
+        {
+            elem: 'header',
+            content: [
+                {
+                    elem: 'icon',
+                    content: {
+                        block : 'image',
+                        url : channel.img,
+                    }
+                },
+                {
+                    elem: 'title',
+                    content: channel.title
+                },
+                {
+                    elem: 'link',
+                    content: {
+                        block: 'button',
+                        url: channel.link,
+                        mods: {
+                            type: 'link',
+                            theme : 'islands', size : 'm',
+                            iew : 'plain'
+                        },
+                        icon : {
+                            block : 'icon',
+                            mods : {
+                                watch : true
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            elem: 'content',
+            content: {
+                elem: 'shows',
+                content: channel.shows.map(function (show) {
+                    return {
+                        block: 'tv-show',
+                        show: show
+                    };
+                })
+
+            }
+        }
+    ];
+});

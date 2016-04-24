@@ -1,0 +1,15 @@
+block('tv-show').content()(function() {
+
+    var show = this.ctx.show;
+
+    return [
+        {
+            elem: 'time',
+            content: show.time,
+        },
+        {
+            elem: 'title',
+            content: show.title,
+        },
+    ];
+});
