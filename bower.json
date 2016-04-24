@@ -1,0 +1,14 @@
+{
+  "name": "shri-one",
+  "version": "0.0.1",
+  "description": "",
+  "bugs": "https://github.com/Rabinzon/shri-one",
+  "ignore": [
+    ".bem/cache",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-components": "2.4.0"
+  }
+}
